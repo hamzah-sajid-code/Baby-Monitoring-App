@@ -8,10 +8,10 @@ function preload()
 }
 
 function setup() {
-  canvas = createCanvas(380, 380);
+  canvas = createCanvas(640, 420);
   canvas.center();
   video = createCapture(VIDEO);
-  video.size(380,380);
+  video.size(640, 420);
   video.hide();
   objectDetector = ml5.objectDetector('cocossd', modelLoaded);
   document.getElementById("status").innerHTML = "Status : Detecting Objects";
@@ -32,7 +32,7 @@ function gotResult(error, results) {
 
 
 function draw() {
-  image(video, 0, 0, 380, 380);
+  image(video, 0, 0, 640, 420);
       if(status != "")
       {
         r =  random(255);
